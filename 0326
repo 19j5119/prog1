@@ -1,0 +1,13 @@
+# coding: utf-8
+# Your code here!
+
+for x in range(21):
+    print(100-10*x, end=" ")
+for x in range(10):
+    print(x**2, end=" ")
+for x in range(100):
+    print(x%5, end=" ")
+for x in range(100):
+    print(x%2, end=" ")
+for x in range(100):
+    print((x%2+1)*2, end=" ")
