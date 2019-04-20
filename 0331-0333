@@ -1,0 +1,9 @@
+# coding: utf-8
+# Your code here!
+
+for x in range(1000,1015,2):
+    print(x, end=" ")
+for x in range(1000,1110,10):
+    print(x, end=" ")
+for x in range(0,110,10):
+    print(x, end=" ")
