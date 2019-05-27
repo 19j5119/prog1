@@ -1,0 +1,52 @@
+print("(", end="")
+print("^", end="")
+print("_", end="")
+print("^", end="")
+print(")", end="")
+
+def emoji():
+    print("(", end="")
+    print("^", end="")
+    print("_", end="")
+    print("^", end="")
+    print(")", end="")
+    
+emoji()
+
+def emoji():
+    print("(", end="")
+    print("^", end="")
+    print("_", end="")
+    print("^", end="")
+    print(")", end="")
+    
+for x in range(5):
+    emoji()
+    
+def emoji(eye):
+    print("(", end="")
+    print(eye, end="")
+    print("_", end="")
+    print(eye, end="")
+    print(")", end="")
+    
+for x in range(5):
+    emoji("T")
+    
+def emoji(eye):
+    print("(", end="")
+    print(eye, end="")
+    print("_", end="")
+    print(eye, end="")
+    print(")", end="")
+def emoji_table(m,n):
+    for y in range(n):
+        for x in range(m):
+            if(x%2==1 and y%2==0 or x%2==0 and y%2==1):
+                emoji("*")
+            else:
+                emoji("-")
+        print()
+        
+emoji_table(8,4)
+
