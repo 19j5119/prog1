@@ -1,0 +1,21 @@
+n=10
+score=[10 for x in range(10)]
+for x in range(len(score)):
+    score[x]=(89*(x+1))%101
+for x in range(len(score)):
+    print(score[x], end="\t")
+    
+n=10
+score=[100 for x in range(10)]
+for x in range(len(score)):
+    score[x]=(89*(x+1))%101
+for x in range(len(score)):
+    print(score[x], end="\t")
+print()
+
+rank=[0 for x in range(n)]
+for x in range(len(rank)):
+    for y in range(len(rank)):
+        if(score[x]<=score[y]):
+            rank[x]=rank[x]+1
+    print(rank[x], end="\t")
