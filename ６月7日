@@ -1,0 +1,220 @@
+<pre>19j5119@lin3341:~$ firefox &amp;
+[1] 3043
+19j5119@lin3341:~$ 
+[1]+  終了                  firefox
+19j5119@lin3341:~$ 
+19j5119@lin3341:~$ uname -a
+Linux lin3341 4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+19j5119@lin3341:~$ df .
+Filesystem                           1K-blocks   Used Available Use% Mounted on
+juliet.hino.meisei-u.ac.jp:/vol1/stu   2097152 444928   1652224  22% /home/stu
+19j5119@lin3341:~$ cat /etc/os-release
+NAME=&quot;Ubuntu&quot;
+VERSION=&quot;18.04.2 LTS (Bionic Beaver)&quot;
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME=&quot;Ubuntu 18.04.2 LTS&quot;
+VERSION_ID=&quot;18.04&quot;
+HOME_URL=&quot;https://www.ubuntu.com/&quot;
+SUPPORT_URL=&quot;https://help.ubuntu.com/&quot;
+BUG_REPORT_URL=&quot;https://bugs.launchpad.net/ubuntu/&quot;
+PRIVACY_POLICY_URL=&quot;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&quot;
+VERSION_CODENAME=bionic
+UBUNTU_CODENAME=bionic
+19j5119@lin3341:~$ cat /proc/cpuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 94
+model name	: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz
+stepping	: 3
+cpu MHz		: 3192.004
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid pni pclmulqdq monitor ssse3 cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti fsgsbase avx2 invpcid rdseed clflushopt
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6384.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+19j5119@lin3341:~$ cat /proc/meminfo
+MemTotal:        2041304 kB
+MemFree:           80260 kB
+MemAvailable:     435824 kB
+Buffers:           79592 kB
+Cached:           718016 kB
+SwapCached:          232 kB
+Active:           965032 kB
+Inactive:         766400 kB
+Active(anon):     745924 kB
+Inactive(anon):   551904 kB
+Active(file):     219108 kB
+Inactive(file):   214496 kB
+Unevictable:       13600 kB
+Mlocked:           13600 kB
+SwapTotal:        969960 kB
+SwapFree:         954588 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:        947372 kB
+Mapped:           496932 kB
+Shmem:            350452 kB
+Slab:             141272 kB
+SReclaimable:     107028 kB
+SUnreclaim:        34244 kB
+KernelStack:        7212 kB
+PageTables:        39200 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1990612 kB
+Committed_AS:    4237804 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      128960 kB
+DirectMap2M:     1968128 kB
+19j5119@lin3341:~$ 
+19j5119@lin3341:~$ pwd
+/home/stu/2019/j5/19j5119
+19j5119@lin3341:~$ mkdir prog1
+19j5119@lin3341:~$ mkdir prog1/09
+19j5119@lin3341:~$ ls prog1
+09
+19j5119@lin3341:~$ mkdir prog1/09/a
+19j5119@lin3341:~$ mkbir prog1/09/b
+
+Command &apos;mkbir&apos; not found, did you mean:
+
+  command &apos;mkdir&apos; from deb coreutils
+
+Try: apt install &lt;deb name&gt;
+
+19j5119@lin3341:~$ mkdir prog1/09/a
+mkdir: ディレクトリ `prog1/09/a&apos; を作成できません: ファイルが存在します
+19j5119@lin3341:~$ mkdir prog1/09/b
+19j5119@lin3341:~$ ls prog1/09
+a  b
+19j5119@lin3341:~$ mkdir prog1/09/a/hoge
+19j5119@lin3341:~$ mv prog1/09/a/hoge prog1/09
+19j5119@lin3341:~$ ls prog1/09
+a  b  hoge
+19j5119@lin3341:~$ mv prog1/09/hoge prog1/09/b
+19j5119@lin3341:~$ ls prog1/09/b
+hoge
+19j5119@lin3341:~$ rmdir prog1/09/b/hoge
+19j5119@lin3341:~$ rmdir prog1/09/a
+19j5119@lin3341:~$ rmidr prog1/09/b
+
+Command &apos;rmidr&apos; not found, did you mean:
+
+  command &apos;rmdir&apos; from deb coreutils
+  command &apos;rmid&apos; from deb openjdk-11-jre-headless
+  command &apos;rmid&apos; from deb openjdk-8-jre-headless
+
+Try: apt install &lt;deb name&gt;
+
+19j5119@lin3341:~$ rmdir prog1/09/b
+19j5119@lin3341:~$ rmdirprog1/09
+bash: rmdirprog1/09: そのようなファイルやディレクトリはありません
+19j5119@lin3341:~$ rmdir prog1/09
+19j5119@lin3341:~$ rmdir prog1
+19j5119@lin3341:~$ pwd
+/home/stu/2019/j5/19j5119
+19j5119@lin3341:~$ pwd prog1
+/home/stu/2019/j5/19j5119
+19j5119@lin3341:~$ cd prog1
+bash: cd: prog1: そのようなファイルやディレクトリはありません
+19j5119@lin3341:~$ mkdir prog1
+19j5119@lin3341:~$ cd prog1
+19j5119@lin3341:~/prog1$ pwd
+/home/stu/2019/j5/19j5119/prog1
+19j5119@lin3341:~/prog1$ mkdir 09
+19j5119@lin3341:~/prog1$ ls.
+
+Command &apos;ls.&apos; not found, did you mean:
+
+  command &apos;lsd&apos; from snap lsd (0.14.0)
+  command &apos;lsc&apos; from deb livescript
+  command &apos;lsw&apos; from deb suckless-tools
+  command &apos;lsh&apos; from deb lsh-client
+  command &apos;lsm&apos; from deb lsm
+  command &apos;ls&apos; from deb coreutils
+
+See &apos;snap info &lt;snapname&gt;&apos; for additional versions.
+
+19j5119@lin3341:~/prog1$ ls .
+09
+19j5119@lin3341:~/prog1$ cd 09
+19j5119@lin3341:~/prog1/09$ mkdir a
+19j5119@lin3341:~/prog1/09$ mkdir b
+19j5119@lin3341:~/prog1/09$ ls .
+a  b
+19j5119@lin3341:~/prog1/09$ cd a
+19j5119@lin3341:~/prog1/09/a$ ls .
+19j5119@lin3341:~/prog1/09/a$ pwd
+/home/stu/2019/j5/19j5119/prog1/09/a
+19j5119@lin3341:~/prog1/09/a$ mkdir hoge
+19j5119@lin3341:~/prog1/09/a$ ls .
+hoge
+19j5119@lin3341:~/prog1/09/a$ cd hoge
+19j5119@lin3341:~/prog1/09/a/hoge$ pwd
+/home/stu/2019/j5/19j5119/prog1/09/a/hoge
+19j5119@lin3341:~/prog1/09/a/hoge$ mv hoge ..
+mv: &apos;hoge&apos; を stat できません: そのようなファイルやディレクトリはありません
+19j5119@lin3341:~/prog1/09/a/hoge$ mv hoge..
+mv: &apos;hoge..&apos; の後に宛先のファイルオペランドがありません
+Try &apos;mv --help&apos; for more information.
+19j5119@lin3341:~/prog1/09/a/hoge$ mv hoge ..09
+mv: &apos;hoge&apos; を stat できません: そのようなファイルやディレクトリはありません
+19j5119@lin3341:~/prog1/09/a/hoge$ mv hoge ..
+mv: &apos;hoge&apos; を stat できません: そのようなファイルやディレクトリはありません
+19j5119@lin3341:~/prog1/09/a/hoge$ ls .
+19j5119@lin3341:~/prog1/09/a/hoge$ ls
+19j5119@lin3341:~/prog1/09/a/hoge$ cd ..
+19j5119@lin3341:~/prog1/09/a$ ls
+hoge
+19j5119@lin3341:~/prog1/09/a$ mv hoge ..
+19j5119@lin3341:~/prog1/09/a$ ls
+19j5119@lin3341:~/prog1/09/a$ ls ..
+a  b  hoge
+19j5119@lin3341:~/prog1/09/a$ cd ..
+19j5119@lin3341:~/prog1/09$ mv hoge b
+19j5119@lin3341:~/prog1/09$ ls
+a  b
+19j5119@lin3341:~/prog1/09$ cd b
+19j5119@lin3341:~/prog1/09/b$ ls
+hoge
+19j5119@lin3341:~/prog1/09/b$ rmdir hoge
+19j5119@lin3341:~/prog1/09/b$ ls
+19j5119@lin3341:~/prog1/09/b$ cd ..
+19j5119@lin3341:~/prog1/09$ rmdir a
+19j5119@lin3341:~/prog1/09$ rmdir b
+19j5119@lin3341:~/prog1/09$ ls
+19j5119@lin3341:~/prog1/09$ cd ..
+19j5119@lin3341:~/prog1$ rmdir 09
+19j5119@lin3341:~/prog1$ ls
+19j5119@lin3341:~/prog1$ 
+</pre>
